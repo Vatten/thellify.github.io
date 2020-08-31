@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      fetch("/")
+      .then(response => response.text())
+      .then(data => {
+        var images = document.createElement('div');
+        images.innerHTML = data;
+        console.log(JSON.parse(images.getElementsByClassName("images")[0].innerHTML))
+      });
+    </script>
+  </body>
+</html>
+
